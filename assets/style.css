@@ -5,6 +5,9 @@
     font-size: 14px;
     font-family: sans-serif;
 }
+p{
+    margin-bottom: 0 !important;
+}
 header{
     padding: 32px;
     justify-content: space-between;
@@ -74,7 +77,8 @@ header{
     background: #fff;
     border-radius: 0 12px 12px;
 }
-.bookflight input{
+.bookflight input,
+.flightBtn{
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -82,15 +86,95 @@ header{
     width: 100%;
     height: 64px;
     padding: 0 16px;
+    background-color: #fff;
 
 }
-.bookflight button{
+.passangerDivs{
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    right: 43px;
+    overflow: hidden;
+    width: 330px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgb(34 42 55 / 4%), 0px 0px 4px rgb(34 42 55 / 4%);
+}
+.passangerDivs{
+    display: none;
+}
+.passangerDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #F2F5FB;
+    border-radius: .5px;
+}
+.passangerDiv div:last-child{
+    align-items: center;
+}
+.passangerDiv div:last-child p{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 28px;
+    margin: 0 8px;
+    font-weight: 500;
+    color: var(--color-n-900);
+}
+.passangerDiv_parag span{
+    font-size: 13px;
+    line-height: 20px;
+    color: #6E7583;
+}
+.passangerDiv_parag p{
+    font-size: large;
+    font-weight: bold;
+}
+.passangerDiv button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #F5F6F8;
+    border: 1px solid #CDD5DF;
+    border-radius: 50%;
+}
+.sumbitButton{
     padding: 10px;
     width: 100%;
     height: 100%;
     background: #01357E;
     border: 1px solid #CDD5DF;
     border-radius: 0 12px 12px 0;
+}
+.passangerButton{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 158px;
+    height: 64px;
+    padding: 10px 16px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #CDD5DF;
+}
+.passangerButton span{
+    font-size: 13px;
+    line-height: 20px;
+    color: #6E7583;
+}
+.passangerButton p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #2e3034;
 }
 main{
     padding: 48px 100px 80px;
@@ -253,4 +337,64 @@ li{
     justify-content: space-between;
     width: 100%;
     margin-bottom: 16px;
+}
+.flight_svg{
+    width: 16px;
+    height: 16px;
+}
+.bookflight{
+    position: relative;
+}
+.bookflight .return_svg{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 1px solid #DBE0E4;
+    border-radius: 50%;
+}
+.header_button_div.active{display: block;}
+.header_button_div{
+    display: none;
+    z-index: 4;
+    right: 0%;
+    top: calc(100% + 24px);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 16px;
+    color: #2E3034;
+    background: #FFF;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgb(34 42 55 / 4%), 0px 0px 4px rgb(34 42 55 / 4%);
+}
+.header_button_div li{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    min-width: 180px;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    border-radius: 0;
+}
+.header_button_div li:hover{
+    background-color: #f4f5f5;
+}
+.header_button_div a{
+    color: #2E3034;
+}
+a:hover{
+    text-decoration: none !important;
+    color: #2e3034;
+}
+.calendar{
+    display: none;
 }

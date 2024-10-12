@@ -10,7 +10,9 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <script href="./assets/index.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/calendar.css" />
+    <script src="./assets/js/calendar.js" defer></script>
+    <script src="./assets/index.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -23,10 +25,20 @@
           />
         </div>
         <div class="d-flex header_selects">
-          <div class="header_select">
+          <div class="header_select" style="position: relative">
             <button class="head_button d-flex">Currency</button>
+            <div
+              class="currencyDiv header_button_div"
+              style="position: absolute"
+            >
+              <ul>
+                <li><a href="#">Azn</a></li>
+                <li><a href="#">Usd</a></li>
+                <li><a href="#">Euro</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="header_select">
+          <div class="header_select" style="position: relative">
             <button class="head_button d-flex">
               <svg
                 width="25px"
@@ -67,9 +79,19 @@
               </svg>
               English
             </button>
+            <div
+              class="languageDiv header_button_div"
+              style="position: absolute"
+            >
+              <ul>
+                <li><a href="#">Azerbaycan</a></li>
+                <li><a href="#">Ingilisce</a></li>
+                <li><a href="#">Rusca</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div class="header_select">
+          <div class="header_select" style="position: relative">
             <button class="head_button d-flex">
               <svg
                 width="25px"
@@ -115,6 +137,15 @@
               </svg>
               Personal Account
             </button>
+            <div
+              class="accountDiv header_button_div"
+              style="position: absolute"
+            >
+              <ul>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -135,20 +166,91 @@
         </div>
         <div class="bookflight">
           <form action="" class="d-flex">
+            <button class="return_svg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="9.49 6.4 11.02 13.2"
+                class="flight_svg"
+              >
+                <g
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m17.727 7 2.182 2.182-2.182 2.182"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M10.09 12.454v-1.09a2.182 2.182 0 0 1 2.183-2.182h7.636"
+                    stroke="#16181D"
+                  ></path>
+                  <path
+                    d="M12.273 19 10.09 16.82l2.182-2.182"
+                    stroke="currentColor"
+                  ></path>
+                  <path
+                    d="M19.909 13.545v1.09a2.182 2.182 0 0 1-2.182 2.183h-7.636"
+                    stroke="currentColor"
+                  ></path>
+                </g>
+              </svg>
+            </button>
             <div class="d-flex" style="width: 25%">
               <input type="text" placeholder="From" />
             </div>
             <div class="d-flex" style="width: 25%">
               <input type="text" placeholder="To" />
             </div>
-            <div style="width: 30%">
-              <input type="text" placeholder="Flight date" />
+            <div style="width: 30%; position: relative">
+              <button class="flightBtn">Flight</button>
+              <div class="calendar" style="position: absolute"></div>
             </div>
             <div style="width: 15%">
-              <input type="text" placeholder="Passanger" />
+              <button class="passangerButton">
+                <span>Passangers</span>
+                <p>0</p>
+              </button>
+              <div class="passangerDivs">
+                <div class="passangerDiv d-flex">
+                  <div class="passangerDiv_parag">
+                    <p>Adults</p>
+                    <span>from 12 years</span>
+                  </div>
+                  <div class="d-flex">
+                    <button class="passanger_minus">-</button>
+                    <p class="passanger_num">0</p>
+                    <button class="passanger_plus">+</button>
+                  </div>
+                </div>
+                <div class="passangerDiv d-flex">
+                  <div class="passangerDiv_parag">
+                    <p>Children</p>
+                    <span>from 12 years</span>
+                  </div>
+                  <div class="d-flex">
+                    <button class="passanger_minus">-</button>
+                    <p class="passanger_num">0</p>
+                    <button class="passanger_plus">+</button>
+                  </div>
+                </div>
+                <div class="passangerDiv d-flex">
+                  <div class="passangerDiv_parag">
+                    <p>Infants</p>
+                    <span>from 12 years</span>
+                  </div>
+                  <div class="d-flex">
+                    <button class="passanger_minus">-</button>
+                    <p class="passanger_num">0</p>
+                    <button class="passanger_plus">+</button>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div style="width: 5%">
-              <button type="submit">
+              <button type="submit" class="sumbitButton">
                 <svg
                   viewBox="0 0 32 32"
                   version="1.1"
